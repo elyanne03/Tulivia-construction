@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulivia Construction</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./Script.js"></script>
+</head>
+<body>
+    <!-- En-tête : coordonnées, compte et préférences langue/devise -->
+    <header class="top-header">
+        <div class="contact-container">
+            <div class="contact-item">
+                <img src="images/Logo téléphone.jpeg" alt="Téléphone">
+                <span>+243 972 234 888</span>
+            </div>
+            <div class="contact-item">
+                <img src="images/Logo email.jpeg" alt="Email">
+                <span>info@tulivia.com</span>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="images/Logo linkdin.jpeg" alt="LinkedIn"></a>
+                <a href="#"><img src="images/Logo whatsapp.jpeg" alt="WhatsApp"></a>
+            </div>
+        </div>
+        <div class="account-container">
+            <a href="#" class="login">Se connecter</a>
+            <a href="#" class="create-account">Créer un compte</a>
+            <div class="locale-picker">
+                <button type="button" class="locale-trigger" id="localeTrigger" aria-expanded="false">
+                    Français - USD
+                </button>
+                <div class="locale-controls" id="localeControls" hidden>
+                    <label>
+                        <span>Langue</span>
+                        <select id="languageSelect" aria-label="Choisir la langue">
+                            <option value="fr" selected>Français</option>
+                            <option value="en">English</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Devise</span>
+                        <select id="currencySelect" aria-label="Choisir la devise">
+                            <option value="usd" selected>USD</option>
+                            <option value="cdf">CDF</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navigation principale et accès au formulaire de devis -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/Logo tulivia.png"
+                alt="Tulivia Construction">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#tarifs">Matériaux</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button type="button" class="devis quote-trigger">Devis</button></li>
+        </ul>
+    </nav>
+    <!-- Section d'accueil avec recherche de produits -->
+    <section class="hero" id="accueil">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Matériaux de Construction<br>Premium</h1>
+            <p>Fournisseur leader à Lubumbashi pour vos projets.</p>
+            <div class="hero-buttons">
+                <a href="#tarifs" class="btn-products">
+                    Nos Produits
+                </a>
+                <a href="#contact" class="btn-contact">
+                    Contactez-nous
+                </a>
+            </div>
+            <form class="search-bar">                       
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Rechercher un produit...">
+                <button type="submit">
+                    Recherche
+                </button>
+            </form>
+            <p class="search-result" id="searchResult"></p>
+        </div>
+    </section>
+    <!-- Présentation des services -->
+    <section class="services" id="services">
+        <div class="services-title">
+            <p class="section-subtitle">CE QUE NOUS PROPOSONS</p>
+            <h2>Nos Services</h2>
+            <p>Des solutions complètes pour répondre à tous vos besoins en construction.</p>
+        </div>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3>Matériaux de Construction</h3>
+                <p>Nous proposons des matériaux fiables et de qualité pour tous vos projets de construction.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚚</div>
+                <h3>Livraison Rapide</h3>
+                <p>Nous assurons une livraison rapide et fiable directement sur votre chantier.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👷</div>
+                <h3>Conseils Professionnels</h3>
+                <p>Notre équipe vous accompagne dans le choix des meilleurs matériaux pour vos besoins.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Statistiques et présentation des matériaux -->
+    <section class="tarifs" id="tarifs">
+        <div class="tarifs-text">
+            <p class="section-subtitle">TULIVIA CONSTRUCTION</p>
+            <h2>Nos Matériaux</h2>
+            <p>Choisissez les matériaux qui conviennent le mieux à vos projets, que vous soyez particulier ou professionnel.</p>
+        </div>
+        <div class="statistics">
+            <div class="stat-item">
+                <h3 data-target="100">0</h3>
+                <p>Projets<br>Terminés</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-target="15">0</h3>
+                <p>Prix<br>Remportés</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-target="5">0</h3>
+                <p>Années<br>d'Expérience</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-target="100">0</h3>
+                <p>Clients<br>Satisfaits</p>
+            </div>
+        </div>
+    </section>
+    <!-- Catalogue des produits -->
+    <section class="products">
+        <div class="services-title">
+            <p class="section-subtitle">NOS PRODUITS</p>
+            <h2>Découvrez nos matériaux</h2>
+            <p>Une sélection de produits pour accompagner tous vos projets.</p>
+        </div>
+        <div class="products-container">
+            <div class="product-card">
+                <div class="product-image">🧱</div>
+                <h3>Ciment</h3>
+                <p>Des matériaux solides pour vos fondations et constructions.</p>
+                <button class="product-button">
+                    Voir le produit
+                </button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🔩</div>
+                <h3>Fer et Acier</h3>
+                <p>Des matériaux résistants pour vos structures.</p>
+                <button class="product-button">
+                    Voir le produit
+                </button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🎨</div>
+                <h3>Peinture</h3>
+                <p>Donnez une nouvelle vie à vos espaces.</p>
+                <button class="product-button">
+                    Voir le produit
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Engagement et avantages de l'entreprise -->
+    <section class="engagement" id="engagement">
+        <div class="engagement-logo">
+            <div class="logo-flip-card">
+                <div class="logo-flip-face logo-flip-front">
+                    <img src="images/Logo tulivia.png"
+                        alt="Tulivia Construction">
+                </div>
+                <div class="logo-flip-face logo-flip-back">
+                    <img src="images/a_augement_la_qualité_.jpeg" alt="Tulivia Construction">
+                </div>
+            </div>
+        </div>
+        <div class="engagement-content">
+            <p class="section-subtitle">NOTRE ENGAGEMENT</p>
+            <h2>Notre Engagement<br>envers l'Excellence</h2>
+            <p>Fondée en 2005, Tulivia Construction s'est imposée comme un fournisseur de référence en matériaux de construction à Lubumbashi grâce à son engagement envers la qualité et le service client.</p>
+            <p>Notre équipe d'experts sélectionne rigoureusement chaque produit afin de garantir des performances optimales sur vos chantiers.</p>
+            <div class="advantages">
+                <div class="advantage">
+                    <span class="advantage-icon">✓</span>
+                    <span>Matériaux certifiés et testés</span>
+                </div>
+                <div class="advantage">
+                    <span class="advantage-icon">✓</span>
+                    <span>Livraison rapide et fiable</span>
+                </div>
+                <div class="advantage">
+                    <span class="advantage-icon">✓</span>
+                    <span>Une équipe à votre écoute</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact et formulaire de message -->
+    <section class="contact-section" id="contact">
+        <div class="contact-text">
+            <p class="section-subtitle white-text">CONTACTEZ-NOUS</p>
+            <h2>Parlons de votre projet</h2>
+            <p>Vous avez besoin de matériaux ou souhaitez obtenir un devis ? Contactez notre équipe.</p>
+            <div class="contact-details">
+                <p>📞 +243 972 234 888</p>
+                <p>✉ info@tulivia.com</p>
+                <p>📍 Lubumbashi, RDC</p>
+            </div>
+        </div>
+        <form class="contact-form"
+            id="contactForm">
+            <label for="material">Matériau souhaité</label>
+            <select id="material" required>
+                <option value="" selected disabled>Choisissez un matériau</option>
+                <option value="ciment">Ciment</option>
+                <option value="fer-acier">Fer et acier</option>
+                <option value="peinture">Peinture</option>
+                <option value="autre">Autre matériau</option>
+            </select>
+            <label for="quantity">Quantité souhaitée</label>
+            <input
+                type="number"
+                id="quantity"
+                min="1"
+                placeholder="Ex. 20"
+                required>
+            <input
+                type="text"
+                id="name"
+                placeholder="Votre nom"
+                required>
+            <input
+                type="email"
+                id="email"
+                placeholder="Votre email"
+                required>
+            <input
+                type="text"
+                id="subject"
+                placeholder="Sujet">
+            <textarea id="message"placeholder="Votre message" required></textarea>
+            <button type="submit">
+                Envoyer le message
+            </button>
+            <p id="formMessage"></p>
+        </form>
+    </section>
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo-section">
+                <img src="images/Logo tulivia.png"
+                    alt="Tulivia Construction">
+                <p>Tulivia Construction est votre partenaire de confiance pour tous vos besoins en matériaux de construction à Lubumbashi.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Liens rapides</h3>
+                <a href="#accueil">Accueil</a>
+                <a href="#services">Services</a>
+                <a href="#tarifs">Matériaux</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Lubumbashi, RDC</p>
+                <p>+243 972 234 888</p>
+                <p>info@tulivia.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Tulivia Construction -
+            Tous droits réservés.
+        </div>
+    </footer>
+    <!-- Fenêtre contenant le formulaire de demande de devis -->
+    <div class="quote-modal" id="quoteModal" aria-hidden="true">
+        <div class="quote-modal-content" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
+            <button type="button" class="quote-close" id="quoteClose" aria-label="Fermer">&times;</button>
+            <p class="section-subtitle">DEMANDE DE DEVIS</p>
+            <h2 id="quoteTitle">Remplissez votre demande</h2>
+            <form class="quote-form" id="quoteForm">
+                <label for="quoteName">Nom complet</label>
+                <input type="text" id="quoteName" required>
+                <label for="quoteEmail">Adresse email</label>
+                <input type="email" id="quoteEmail" required>
+                <label for="quoteMaterial">Matériau souhaité</label>
+                <select id="quoteMaterial" required>
+                    <option value="" selected disabled>Choisissez un matériau</option>
+                    <option value="ciment">Ciment</option>
+                    <option value="fer-acier">Fer et acier</option>
+                    <option value="peinture">Peinture</option>
+                    <option value="autre">Autre matériau</option>
+                </select>
+                <label for="quoteQuantity">Quantité</label>
+                <input type="number" id="quoteQuantity" min="1" required>
+                <label for="quoteDetails">Détails du projet</label>
+                <textarea id="quoteDetails" rows="4" placeholder="Décrivez votre besoin"></textarea>
+                <button type="submit">Envoyer la demande</button>
+                <p id="quoteMessage" role="status"></p>
+            </form>
+        </div>
+    </div>
+    <a href="#accueil" class="back-to-top"id="backToTop">↑</a>
+    <!-- Navigation fixe affichée sur téléphone -->
+    <nav class="mobile-nav">
+        <a href="#accueil">
+            <span class="mobile-icon">🏠</span>
+            <small>Accueil</small>
+        </a>
+        <a href="#services">
+            <span class="mobile-icon">🏗️</span>
+            <small>Services</small>
+        </a>
+        <a href="#tarifs">
+            <span class="mobile-icon">🧱</span>
+            <small>Matériaux</small>
+        </a>
+        <a href="#contact">
+            <span class="mobile-icon">✉️</span>
+            <small>Contact</small>
+        </a>
+        <button type="button" class="mobile-devis quote-trigger">
+            <span class="mobile-icon">
+                📋
+            </span>
+            <small>Devis</small>
+        </button>
+    </nav>
+</body>
+</html>
